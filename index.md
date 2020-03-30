@@ -48,12 +48,6 @@
                             <input type="text" id="mname" name="mname" />
                         </div>
 
-                        
-
-                        <div class="grid-item">
-                            <label for="minit">Name on State ID (Full Name):</label><br />
-                            <input type="text" id="minit" name="minit" />
-                        </div>
 
                         <div class="grid-item">
                             <label for="minit">Birthdate:</label><br />
