@@ -42,3 +42,7 @@ select{
     width: 150px;
     border-radius: 5px;
 }
+
+#grad-date-div{
+    visibility: hidden;
+}

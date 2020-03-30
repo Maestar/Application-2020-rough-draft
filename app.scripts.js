@@ -2,10 +2,10 @@ function askDate(){
   const dateField = document.getElementById('grad-date-div');
   const degreeValue = document.getElementById('conferreddegree').value;
   if(degreeValue === 'yes'){
-      dateField.hidden = true;
+      dateField.style.visibility = 'hidden';
   }
   else{
-      dateField.hidden = false;
+      dateField.style.visibility = 'visible';
   }
   
 }

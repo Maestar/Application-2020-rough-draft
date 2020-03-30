@@ -193,7 +193,7 @@
                                 <option value='no'>No</option>
                             </select>
                         </div>
-                        <div class="grid-item" id="grad-date-div" hidden=true>
+                        <div class="grid-item" id="grad-date-div">
                             <label for="graddate">Expected graduation date:</label><br />
                             <input type="date" id="graddate" name="graddate" />
                         </div>
