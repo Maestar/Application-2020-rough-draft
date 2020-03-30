@@ -27,13 +27,17 @@
         <div class="form-container">
             <form class="application">
                 <fieldset class="personal-info">
-                    <legend>Personal Information:</legend>
+                    <legend>Personal Information:<br/>
+                    <span class="subtitle">Please list Legal Name as seen on ID.</span></legend>
                     <div class="grid">
                         <div class="grid-item">
                             <label for="fname">First Name:</label><br />
                             <input type="text" id="fname" name="fname" />
                         </div>
-
+                        <div class="grid-item">
+                            <label for="minit">Middle Initial:</label><br />
+                            <input type="text" id="minit" name="minit" />
+                        </div>
                         <div class="grid-item">
                             <label for="lname">Last Name:</label><br />
                             <input type="text" id="lname" name="lname" />
@@ -44,10 +48,7 @@
                             <input type="text" id="mname" name="mname" />
                         </div>
 
-                        <div class="grid-item">
-                            <label for="minit">Middle Initial:</label><br />
-                            <input type="text" id="minit" name="minit" />
-                        </div>
+                        
 
                         <div class="grid-item">
                             <label for="minit">Name on State ID (Full Name):</label><br />
@@ -105,13 +106,40 @@
                             <label for="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">Phone Number:</label> <br />
                             <input type="tel" id="phone" name="phone" />
                         </div>
+                        <div class="grid-item">
+                            <label for="email" >Email Address:</label> <br />
+                            <input type="email" id="email" name="email" />
+                        </div>
 
                     </div>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Citizenship Information:</legend>
+                    <legend>Citizenship and Ethnicity Information:</legend>
                     <div class="grid">
+                       
+
+                        <div class="grid-item">
+                            <label for="uscitizen">Are you a US Citizen?</label><br />
+                            <select id="uscitizen" name="uscitizen">
+                                <option value="yes">Yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                        <div class="grid-item">
+                            <label for="military">Are you a veteran or active military?</label><br />
+                            <select id="military" name="military">
+                                <option value="yes">Yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                        <div class="grid-item">
+                            <label for="uswork">Are you eligible to work in the United States?</label><br />
+                            <select id="uswork" name="uswork">
+                                <option value="yes">Yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
                         <div class="grid-item">
                             <label for="ethnicity">Ethnicity:</label><br />
                             <Select type="" id="ethnicity" name="ethnicity">
@@ -123,14 +151,6 @@
                                 <option value="">Native Hawaiian or Pacific Islander</option>
                                 <option value="">Other</option>
                             </Select>
-                        </div>
-
-                        <div class="grid-item">
-                            <label for="uscitizen">Are you a US Citizen?</label><br />
-                            <select id="uscitizen" name="uscitizen">
-                                <option value="yes">Yes</option>
-                                <option value="no">no</option>
-                            </select>
                         </div>
                         <div class="grid-item">
                             <label for="hispanic">Are you Hispanic/Latino?</label><br />
@@ -152,6 +172,30 @@
                         <div class="grid-item">
                             <label for="certstate">Certification State:</label><br />
                             <select id="certstate" name="certstate"></select>
+                        </div>
+                        <div class="grid-item">
+                            <label for="programarea">Area of Interest:</label><br />
+                            <select id="programarea" name="programarea">
+                                <option value="elementary">Elementary</option>
+                                <option value="secondary">Secondary</option>
+                                <option value="special">Special Education</option>
+                            </select>
+                            
+                        </div>
+                        <div class="grid-item">
+                            <label for="otherinterest">Additional Areas of Interest:</label><br/>
+                            <input type="text" id="otherinterest" name="otherinterest"/>
+                        </div>
+                        <div class="grid-item">
+                            <label for="conferreddegree">Do you have a conferred degree?</label><br/>
+                            <select id="conferreddegree" name="conferreddegree" onchange="askDate()">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="grid-item conferred-dependent">
+                            <label for="graddate">Expected graduation date:</label><br />
+                            <input type="date" id="graddate" name="graddate" />
                         </div>
                         <div class="grid-item">
                             <label for="otherprog">Have you ever been enrolled in another teacher prep program?</label>
@@ -212,7 +256,7 @@
         </div>
     </div>
 
-    <script src="app.scripts.js" async defer></script>
+    <script src="app.scripts.js" defer></script>
 </body>
 
 </html>
