@@ -153,7 +153,7 @@
                             </Select>
                         </div>
                         <div class="grid-item">
-                            <label for="hispanic">Are you Hispanic/Latino?</label><br />
+                            <label for="hispanic">Are you Hispanic/Latino? Yes?</label>
                             <input type="checkbox" id="hispanic" name="hispanic" />
                         </div>
                     </div>
@@ -189,20 +189,20 @@
                         <div class="grid-item">
                             <label for="conferreddegree">Do you have a conferred degree?</label><br/>
                             <select id="conferreddegree" name="conferreddegree" onchange="askDate()">
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
+                                <option value='yes'>Yes</option>
+                                <option value='no'>No</option>
                             </select>
                         </div>
-                        <div class="grid-item conferred-dependent">
+                        <div class="grid-item" id="grad-date-div" hidden=true>
                             <label for="graddate">Expected graduation date:</label><br />
                             <input type="date" id="graddate" name="graddate" />
                         </div>
                         <div class="grid-item">
-                            <label for="otherprog">Have you ever been enrolled in another teacher prep program?</label>
+                            <label for="otherprog">Have you ever been enrolled in another teacher prep program? Yes?</label>
                             <input type="checkbox" id="otherprog" name="otherprog" />
                         </div>
                         <div class="grid-item">
-                            <label for="districtoffer">Has a district already made you an offer to teach?</label>
+                            <label for="districtoffer">Has a district already made you an offer to teach? Yes?</label>
                             <input type="checkbox" id="districtoffer" name="districtoffer" />
                         </div>
                     </div>
