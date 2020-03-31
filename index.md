@@ -28,7 +28,7 @@
             <form class="application">
                 <fieldset class="personal-info">
                     <legend>Personal Information:<br/>
-                    <span class="subtitle">Please list Legal Name as seen on ID.</span></legend>
+                    <span class="subtitle">Please list Legal Name as seen on Photo ID.</span></legend>
                     <div class="grid">
                         <div class="grid-item">
                             <label for="fname">First Name:</label><br />
@@ -157,7 +157,8 @@
                     <div class="grid">
                         <div class="grid-item">
                             <label for="certtype">Certification Type:</label>
-                            <select id="certtype" name="certtype">
+                            <select id="certtype" name="certtype" onchange="interestArea()">
+                                <option value="default">Please Choose</option>
                                 <option value="teacher">Teacher</option>
                                 <option value="principal">Principal</option>
                             </select>
@@ -165,10 +166,15 @@
 
                         <div class="grid-item">
                             <label for="certstate">Certification State:</label><br />
-                            <select id="certstate" name="certstate"></select>
+                            <select id="certstate" name="certstate" onchange="interestArea()">
+                                <option value="default">Please Choose</option>
+                                <option value="texas">Texas</option>
+                                <option value="nevada">Nevada</option>
+                                <option value="other-states">Other States</option>
+                            </select>
                         </div>
-                        <div class="grid-item">
-                            <label for="programarea">Area of Interest:</label><br />
+                        <div class="grid-item" id="program-area">
+                            <label for="programarea">Program Area of interest:</label><br />
                             <select id="programarea" name="programarea">
                                 <option value="elementary">Elementary</option>
                                 <option value="secondary">Secondary</option>
@@ -176,21 +182,16 @@
                             </select>
                             
                         </div>
-                        <div class="grid-item">
-                            <label for="otherinterest">Additional Areas of Interest:</label><br/>
-                            <input type="text" id="otherinterest" name="otherinterest"/>
-                        </div>
-                        <div class="grid-item">
-                            <label for="conferreddegree">Do you have a conferred degree?</label><br/>
-                            <select id="conferreddegree" name="conferreddegree" onchange="askDate()">
-                                <option value='yes'>Yes</option>
-                                <option value='no'>No</option>
+                        <div class="grid-item" id="content-area">
+                            <label for="contentarea">Content Area of interest:</label><br />
+                            <select id="contentarea" name="conteantarea">
+                                <option value="placeholder">Big List Here</option>
+                                
                             </select>
+                            
                         </div>
-                        <div class="grid-item" id="grad-date-div">
-                            <label for="graddate">Expected graduation date:</label><br />
-                            <input type="date" id="graddate" name="graddate" />
-                        </div>
+                       
+                        
                         <div class="grid-item">
                             <label for="otherprog">Have you ever been enrolled in another teacher prep program? Yes?</label>
                             <input type="checkbox" id="otherprog" name="otherprog" />
@@ -203,25 +204,40 @@
                 </fieldset>
                 <fieldset>
                     <legend>Education Information:</legend>
-                    <div class="grid education-block">
+                    <div class="grid outer-education-block">
                         <div class="grid-item">
-                            <label for="college">College/University Attended:</label><br/>
-                            <input type="" id="college" name="college"/>
+                            <label for="conferreddegree">Do you have a conferred degree?</label><br/>
+                            <select id="conferreddegree" name="conferreddegree" onchange="askDate()">
+                                <option value='yes'>Yes</option>
+                                <option value='no'>No</option>
+                            </select>
                         </div>
-                        <div class="grid-item">
-                            <label for="major">Major Earned:</label><br/>
-                            <input type="text" id="major" name="major"/>
+                        <div class="grid-item" id="grad-date-div">
+                            <label for="graddate">Expected graduation date:</label><br />
+                            <input type="date" id="graddate" name="graddate" />
                         </div>
-                        <div class="grid-item">
-                            <label for="degree">Degree Awarded(BA,BS,MA,ect.):</label><br/>
-                            <input type="text" id="degree" name="degree"/>
-                        </div>
-                        <div class="grid-item">
-                            <label for="graddate">Last Date Attended/Date of Graduation:</label><br/>
-                            <input type="date" id="graddate" name="graddate"/>
-                        </div>
+                    
+                            <div class="grid grid-item education-block">
+                                <div class="grid-item">
+                                    <label for="college">College/University Attended:</label><br/>
+                                    <input type="" id="college" name="college"/>
+                                </div>
+                                <div class="grid-item">
+                                    <label for="major">Major Earned:</label><br/>
+                                    <input type="text" id="major" name="major"/>
+                                </div>
+                                <div class="grid-item">
+                                    <label for="degree">Degree Awarded(BA,BS,MA,ect.):</label><br/>
+                                    <input type="text" id="degree" name="degree"/>
+                                </div>
+                                <div class="grid-item">
+                                    <label for="graddate">Last Date Attended/Date of Graduation:</label><br/>
+                                    <input type="date" id="graddate" name="graddate"/>
+                                </div>
+                                <button class="grid-item">Add More Education</button>
+                            </div>
                     </div>
-                    <button class="grid-item">Add More Education</button>
+                    
                 </fieldset>
                 <fieldset>
                     <legend>Employment Informaton:</legend>

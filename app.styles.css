@@ -9,6 +9,10 @@
     font-size: 12px;
 }
 
+.education-block{
+    grid-row-start: 2;
+}
+
 fieldset{
     padding: 20px;
     border: 1px solid white;
@@ -43,6 +47,20 @@ select{
     border-radius: 5px;
 }
 
+button{
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+}
+
 #grad-date-div{
     visibility: hidden;
+}
+
+#program-area{
+    display: none;
+}
+
+#content-area{
+    display: none;
 }
