@@ -30,3 +30,15 @@ function interestArea(){
         programArea.style.display = 'none';
     }
 }
+
+function workVisa(){
+    const citizenField = document.getElementById('uscitizen').value;
+    const workEligible = document.getElementById('eligible');
+
+    if(citizenField === 'no'){
+        workEligible.style.display = 'block';
+    }
+    else{
+        workEligible.style.display = 'none';
+    }
+}

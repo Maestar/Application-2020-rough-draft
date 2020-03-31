@@ -115,7 +115,15 @@
 
                         <div class="grid-item">
                             <label for="uscitizen">Are you a US Citizen?</label><br />
-                            <select id="uscitizen" name="uscitizen">
+                            <select id="uscitizen" name="uscitizen" onchange="workVisa()">
+                                <option value="yes">Yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid-item" id="eligible">
+                            <label for="uswork">Are you eligible to work in the United States?</label><br />
+                            <select id="uswork" name="uswork">
                                 <option value="yes">Yes</option>
                                 <option value="no">no</option>
                             </select>
@@ -123,13 +131,6 @@
                         <div class="grid-item">
                             <label for="military">Are you a veteran or active military?</label><br />
                             <select id="military" name="military">
-                                <option value="yes">Yes</option>
-                                <option value="no">no</option>
-                            </select>
-                        </div>
-                        <div class="grid-item">
-                            <label for="uswork">Are you eligible to work in the United States?</label><br />
-                            <select id="uswork" name="uswork">
                                 <option value="yes">Yes</option>
                                 <option value="no">no</option>
                             </select>
