@@ -26,6 +26,42 @@
     <div class="container">
         <div class="form-container">
             <form class="application">
+                <fieldset>
+                    <legend>iteach Account Creation:</legend>
+                    <div class="grid">
+                        <div class="grid-item">
+                            <label for="useremail">Email:</label><br/>
+                            <input type="email" id="useremail" name="useremail"/>
+                        </div>
+                        <div class="grid-item">
+                            <label for="confirmemail">Confirm Email:</label><br/>
+                            <input type="email" id="confirmemail" name="confirmemail"/>
+                        </div>
+                        <div class="grid-item">
+                            <label for="hearaboutus">How did you hear about us?:</label><br/>
+                            <select id="hearaboutus" name="hearaboutus">
+                                <option value="referral">Referral</option>
+                                <option value="job/career fair">Job Fair/Career Fair</option>
+                                <option value="kellyservices">Kelly Services</option>
+                                <option value="schooldistrict">School District</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="linkedin">LinkedIn</option>
+                                <option value="twitter">Twitter</option>
+                                <option value="bingsearch">Bing Search</option>
+                                <option value="googlesearch">Google Search</option>
+                            </select>
+                        </div>
+                        <div class="grid-item">
+                            <label for="userpassword">Password:</label><br/>
+                            <input type="password" id="userpassword" name="userpassword"/>
+                        </div>
+                        <div class="grid-item">
+                            <label for="confirmpassword">Confirm Password:</label><br/>
+                            <input type="password" id="confirmpassword" name="confirmpassword"/>
+                        </div>
+
+                    </div>
+                </fieldset>
                 <fieldset class="personal-info">
                     <legend>Personal Information:<br/>
                     <span class="subtitle">Please list Legal Name as seen on Photo ID.</span></legend>
@@ -263,6 +299,7 @@
                     </div>
                     <button class="grid-item">Add More Work History</button>
                 </fieldset>
+               
             </form>
         </div>
     </div>
